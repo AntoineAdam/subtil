@@ -1,0 +1,7 @@
+suptle.plotting module
+===========================
+
+.. automodule:: suptle.plotting
+    :members:
+    :undoc-members:
+    :show-inheritance:

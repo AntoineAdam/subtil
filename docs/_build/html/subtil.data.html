@@ -1,0 +1,558 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>subtil.data module &#8212; Subtil 1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-subtil.data">
+<span id="subtil-data-module"></span><h1>subtil.data module<a class="headerlink" href="#module-subtil.data" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="subtil.data.Cell">
+<em class="property">class </em><code class="descclassname">subtil.data.</code><code class="descname">Cell</code><span class="sig-paren">(</span><em>id</em>, <em>lineageid</em>, <em>parent</em>, <em>pole</em>, <em>lefttreeposition</em>, <em>birthtime</em>, <em>divisiontime</em>, <em>time=array([]</em>, <em>dtype=float64)</em>, <em>length=array([]</em>, <em>dtype=float64)</em>, <em>maxwidth=array([]</em>, <em>dtype=float64)</em>, <em>area=array([]</em>, <em>dtype=float64)</em>, <em>fluorescence=array([]</em>, <em>dtype=float64)</em>, <em>nucleoids=array([]</em>, <em>dtype=float64)</em>, <em>relativearea=array([]</em>, <em>dtype=float64)</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cell object.</p>
+<p>Represents a cell object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>id: int</strong></dt>
+<dd><p class="first last">unique id of the cell in the database</p>
+</dd>
+<dt><strong>lineageid: int</strong></dt>
+<dd><p class="first last">id of the cell’s lineage</p>
+</dd>
+<dt><strong>parent: Cell</strong></dt>
+<dd><p class="first last">the parent Cell</p>
+</dd>
+<dt><strong>pole: int</strong></dt>
+<dd><p class="first last">0 if the cell inherited the old pole of its parent, 1 otherwise.</p>
+</dd>
+<dt><strong>lefttreeposition: int</strong></dt>
+<dd><p class="first last">position in the binary tree where oldpold cells are stored on the left.</p>
+</dd>
+<dt><strong>birthtime: double</strong></dt>
+<dd><p class="first last">time in the experiment when the cell was born.</p>
+</dd>
+<dt><strong>divisiontime: double</strong></dt>
+<dd><p class="first last">time in the experiment when the cell divided.</p>
+</dd>
+<dt><strong>time: array-like (double), optional</strong></dt>
+<dd><p class="first last">timestamps in the experiment, in minutes.</p>
+</dd>
+<dt><strong>length: array-like (double), optional</strong></dt>
+<dd><p class="first last">length of the cell at each timestamp, in pixels.</p>
+</dd>
+<dt><strong>maxwidth: array-like (double), optional</strong></dt>
+<dd><p class="first last">maximum width of the cell at each timestamp, in pixels.</p>
+</dd>
+<dt><strong>area: array-like (double), optional</strong></dt>
+<dd><p class="first last">area of the cell at each timestamp, in pixel-squares.</p>
+</dd>
+<dt><strong>fluorescence: array-like (double), optional</strong></dt>
+<dd><p class="first last">fluorescence intensity of the whole cell at each timestamp, in ?.</p>
+</dd>
+<dt><strong>nucleoids: array-like (int), optional</strong></dt>
+<dd><p class="first last">Number of fluorescence nucleoids.</p>
+</dd>
+<dt><strong>relativearea: array-like (double), optional</strong></dt>
+<dd><p class="first last">Relative area of the cell covered by the nucleoids.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#subtil.data.Cell.instantlengthgrowthrateat" title="subtil.data.Cell.instantlengthgrowthrateat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instantlengthgrowthrateat</span></code></a>(time[,&nbsp;num_points])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="73%" />
+<col width="27%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>areaat</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>areagrowthrate</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>avgfluorescence</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>avgfluorescenceat</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>avglength</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>descendantalive</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>doublingtime</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>fluorescenceareaatshock</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>fluorescenceatshock</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>fluorescencefociatshock</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>get</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>getsister</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>index</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>lengthat</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>lengthatbirth</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>lengthatdivision</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>lengthatshock</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>lengthgrowthrate</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>lengthgrowthrateatshock</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>lengthincrease</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>lengthincreaseatshock</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>lifetime</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>maxwidthgrowthrate</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>outtreeposition</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>plot</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>timeatshock</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>totalfluorescenceat</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="subtil.data.Cell.areaat">
+<code class="descname">areaat</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.areaat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.areagrowthrate">
+<code class="descname">areagrowthrate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.areagrowthrate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="subtil.data.Cell.attribute_types">
+<code class="descname">attribute_types</code><em class="property"> = {'age': 'numeric', 'alive': 'nominal', 'areagrowthrate': 'numeric', 'avgfluorescence': 'numeric', 'avglength': 'numeric', 'birthtime': 'numeric', 'cycleatshock': 'numeric', 'divisiontime': 'numeric', 'doublingtime': 'numeric', 'fluorescenceareaatshock': 'numeric', 'fluorescenceatshock': 'numeric', 'fluorescencefociatshock': 'numeric', 'generation': 'numeric', 'id': 'nominal', 'index': 'treeindex', 'instantlengthgrowthrate': 'list', 'lagtime': 'numeric', 'lefttreeposition': 'nominal', 'length': 'list', 'lengthatbirth': 'numeric', 'lengthatdivision': 'numeric', 'lengthatshock': 'numeric', 'lengthgrowthrate': 'numeric', 'lengthgrowthrateatshock': 'numeric', 'lengthincrease': 'numeric', 'lengthincreaseatshock': 'numeric', 'lifetime': 'numeric', 'lineageid': 'nominal', 'maxwidthgrowthrate': 'numeric', 'outtreeposition': 'nominal', 'pole': 'nominal', 'survivalrate': 'numeric', 'timeatshock': 'numeric', 'youth': 'numeric'}</em><a class="headerlink" href="#subtil.data.Cell.attribute_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.avgfluorescence">
+<code class="descname">avgfluorescence</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.avgfluorescence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.avgfluorescenceat">
+<code class="descname">avgfluorescenceat</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.avgfluorescenceat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.avglength">
+<code class="descname">avglength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.avglength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.descendantalive">
+<code class="descname">descendantalive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.descendantalive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.doublingtime">
+<code class="descname">doublingtime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.doublingtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.fluorescenceareaatshock">
+<code class="descname">fluorescenceareaatshock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.fluorescenceareaatshock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.fluorescenceatshock">
+<code class="descname">fluorescenceatshock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.fluorescenceatshock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.fluorescencefociatshock">
+<code class="descname">fluorescencefociatshock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.fluorescencefociatshock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.getsister">
+<code class="descname">getsister</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.getsister" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.index">
+<code class="descname">index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.instantlengthgrowthrateat">
+<code class="descname">instantlengthgrowthrateat</code><span class="sig-paren">(</span><em>time</em>, <em>num_points=15</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.instantlengthgrowthrateat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthat">
+<code class="descname">lengthat</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthatbirth">
+<code class="descname">lengthatbirth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthatbirth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthatdivision">
+<code class="descname">lengthatdivision</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthatdivision" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthatshock">
+<code class="descname">lengthatshock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthatshock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthgrowthrate">
+<code class="descname">lengthgrowthrate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthgrowthrate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthgrowthrateatshock">
+<code class="descname">lengthgrowthrateatshock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthgrowthrateatshock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthincrease">
+<code class="descname">lengthincrease</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthincrease" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lengthincreaseatshock">
+<code class="descname">lengthincreaseatshock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lengthincreaseatshock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.lifetime">
+<code class="descname">lifetime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.lifetime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.maxwidthgrowthrate">
+<code class="descname">maxwidthgrowthrate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.maxwidthgrowthrate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.outtreeposition">
+<code class="descname">outtreeposition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.outtreeposition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.timeatshock">
+<code class="descname">timeatshock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.timeatshock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Cell.totalfluorescenceat">
+<code class="descname">totalfluorescenceat</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Cell.totalfluorescenceat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="subtil.data.Lineage">
+<em class="property">class </em><code class="descclassname">subtil.data.</code><code class="descname">Lineage</code><span class="sig-paren">(</span><em>id</em>, <em>experimentid</em>, <em>timestep</em>, <em>fluotimestep=None</em>, <em>cells=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Lineage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="55%" />
+<col width="45%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>get</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>getcells</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>plot</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="subtil.data.Lineage.attribute_types">
+<code class="descname">attribute_types</code><em class="property"> = {'areaatshock': 'numeric', 'areagrowthrate': 'numeric', 'areagrowthrateatshock': 'numeric', 'heatshocktime': 'numeric', 'id': 'nominal', 'populationatshock': 'numeric', 'populationgrowthrate': 'numeric', 'survivalrate': 'numeric'}</em><a class="headerlink" href="#subtil.data.Lineage.attribute_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Lineage.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Lineage.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Lineage.getcells">
+<code class="descname">getcells</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Lineage.getcells" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.data.Lineage.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.Lineage.plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.data.ancestorof">
+<code class="descclassname">subtil.data.</code><code class="descname">ancestorof</code><span class="sig-paren">(</span><em>value</em>, <em>ref</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.ancestorof" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="subtil.data.descendantof">
+<code class="descclassname">subtil.data.</code><code class="descname">descendantof</code><span class="sig-paren">(</span><em>value</em>, <em>ref</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.descendantof" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="subtil.data.getcell">
+<code class="descclassname">subtil.data.</code><code class="descname">getcell</code><span class="sig-paren">(</span><em>id</em>, <em>cells</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.getcell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Cell in cells with the given id</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.data.select">
+<code class="descclassname">subtil.data.</code><code class="descname">select</code><span class="sig-paren">(</span><em>objects</em>, <em>condition</em>, <em>get_mask=False</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a subset array that fits the condition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>objects: array-like, shape [n_objects,]</strong></dt>
+<dd><p class="first last">array of Cell or Lineage</p>
+</dd>
+<dt><strong>condition: string</strong></dt>
+<dd><p class="first">condition is of the form “&lt;attribute&gt; &lt;sign&gt; &lt;value&gt;”.
+&lt;attribute&gt; follows the attribute grammar.
+&lt;sign&gt; is “==”, “!=”, “&lt;”, “&lt;=”, “&gt;”, “&gt;=” or “in”.</p>
+<blockquote class="last">
+<div><p>if “in”, &lt;value&gt; should be a tuple of values.</p>
+</div></blockquote>
+</dd>
+<dt><strong>get_mask: boolean, default</strong> <span class="classifier-delimiter">:</span> <span class="classifier">False</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>newarray: numpy.array</strong></dt>
+<dd><p class="first last">numpy array of Cell or Lineage that fits the condition.
+If get_mask is True, returns mask: numpy array of boolean, shape [n_objects,] such that objects[mask] would normally be returned.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cells</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(1370,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bigcells</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">cells</span><span class="p">,</span> <span class="s2">&quot;avglength &gt; 45&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bigcells</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(780,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wildtype</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">lineages</span><span class="p">,</span> <span class="s2">&quot;id in (746,747,748,749)&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wildtype</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span>
+<span class="go">746</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mask746_lowgrowth</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">wildtype</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cells</span><span class="p">,</span> <span class="s2">&quot;lengthgrowthrate &lt;= 0.023&quot;</span><span class="p">,</span> <span class="n">get_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">wildtype</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">mask746_lowgrowth</span><span class="p">]:</span>
+<span class="gp">... </span>    <span class="nb">print</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lengthgrowthrate&quot;</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="go">0.0173294436084</span>
+<span class="go">0.0202434124752</span>
+<span class="go">0.0215982457257</span>
+<span class="go">0.0228286583693</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.data.table">
+<code class="descclassname">subtil.data.</code><code class="descname">table</code><span class="sig-paren">(</span><em>objects</em>, <em>attributes=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the attributes of several objects as an array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>objects: array, shape [n_objects,]</strong></dt>
+<dd><p class="first last">numpy array of Cell or Lineage</p>
+</dd>
+<dt><strong>attributes: list of string</strong></dt>
+<dd><p class="first">List of attributes to retrieve the value.</p>
+<p class="last">Warning: it has to be a list even for only one attribute.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>newarray: numpy.array</strong></dt>
+<dd><p class="first last">An array where the rows correspond to the objects and the columns are the attributes.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>&gt;&gt;&gt;from subtil.data import table
+&gt;&gt;&gt; table(cells, [“age”,”lengthgrowthrate”]
+array([[ 0, 0.0273294436084],</p>
+<blockquote>
+<div>[ 1, 0.0312488732465],
+…,
+[ 4, 0.0312684213548],
+[ 3, 0.0264284795423]])</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.data.write_arff">
+<code class="descclassname">subtil.data.</code><code class="descname">write_arff</code><span class="sig-paren">(</span><em>cells</em>, <em>attributes</em>, <em>name</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.data.write_arff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Subtil</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Antoine Adam.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/subtil.data.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

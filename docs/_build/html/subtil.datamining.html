@@ -1,0 +1,282 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>subtil.datamining module &#8212; Subtil 1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-subtil.datamining">
+<span id="subtil-datamining-module"></span><h1>subtil.datamining module<a class="headerlink" href="#module-subtil.datamining" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="subtil.datamining.Subgroup">
+<em class="property">class </em><code class="descclassname">subtil.datamining.</code><code class="descname">Subgroup</code><span class="sig-paren">(</span><em>cells</em>, <em>mask</em>, <em>description</em>, <em>target</em>, <em>quality=0</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.Subgroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>TODO</p>
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>plot</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="subtil.datamining.Subgroup.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.Subgroup.plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="subtil.datamining.SubgroupClustering">
+<em class="property">class </em><code class="descclassname">subtil.datamining.</code><code class="descname">SubgroupClustering</code><a class="headerlink" href="#subtil.datamining.SubgroupClustering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>click</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>fit</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>hover</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>slide</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="subtil.datamining.SubgroupClustering.click">
+<code class="descname">click</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.SubgroupClustering.click" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.datamining.SubgroupClustering.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>subgroups</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.SubgroupClustering.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.datamining.SubgroupClustering.hover">
+<code class="descname">hover</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.SubgroupClustering.hover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="subtil.datamining.SubgroupClustering.slide">
+<code class="descname">slide</code><span class="sig-paren">(</span><em>eps</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.SubgroupClustering.slide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.datamining.average_cell">
+<code class="descclassname">subtil.datamining.</code><code class="descname">average_cell</code><span class="sig-paren">(</span><em>cells</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.average_cell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes an average length time-series</p>
+<p>Warning: all cells must have same timestep, and no missing values (That last point should be fixed).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>cells: array of cells</strong></dt>
+<dd><p class="first last">The cells to average.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>average_cell: array-like</strong></dt>
+<dd><p class="first last">The length series of the average cell.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.datamining.cluster_subgroups">
+<code class="descclassname">subtil.datamining.</code><code class="descname">cluster_subgroups</code><span class="sig-paren">(</span><em>subgroups</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.cluster_subgroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.datamining.predictcellcycle">
+<code class="descclassname">subtil.datamining.</code><code class="descname">predictcellcycle</code><span class="sig-paren">(</span><em>cells</em>, <em>attr=None</em>, <em>regressor=None</em>, <em>normalise=True</em>, <em>evaluate=True</em>, <em>plot_error=False</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.predictcellcycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict cellcycle of heatshocked cells</p>
+<p>Builds a training set to learn a model tree that predicts the cell cycle of heatshocked cells as a number between 0 and 1.</p>
+<p>The filamentous cells, defined as cells that get bigger than 100px, are ignored in the construction of the model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>cells: array of cells</strong></dt>
+<dd><p class="first last">This array contains both heatshock cells and fully divided cells from which the regression model is learned.</p>
+</dd>
+<dt><strong>attr: list of string</strong></dt>
+<dd><p class="first last">List containing the attributes to use for the prediction.
+Default list is [“generation”, “age”, “youth”, “parent_doublingtime”, “parent_lengthincrease”, “parent_lengthgrowthrate”,  “lengthatbirth”, “lengthgrowthrate”,”lengthgrowthrateatshock”, “timeatshock”, “lengthincrease”, “absolutefluo”, “absfluoincrease”]</p>
+</dd>
+<dt><strong>regressor: sklearn.Regressor</strong></dt>
+<dd><p class="first last">The regressor to use. Default is the ModelTreeRegressor.</p>
+</dd>
+<dt><strong>normalise: boolean, default: True</strong></dt>
+<dd><p class="first last">Whether to normalise the attributes. If True, each attribute is normalised between 0 and 1 before learning the model.</p>
+</dd>
+<dt><strong>evaluate: boolean, default: True</strong></dt>
+<dd><p class="first last">Whether to perform 10-fold cross validation.</p>
+</dd>
+<dt><strong>plot_error: boolean, default: False</strong></dt>
+<dd><p class="first last">Whether to plot the prediction error. Ignored if evaluate is False.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="subtil.datamining.search">
+<code class="descclassname">subtil.datamining.</code><code class="descname">search</code><span class="sig-paren">(</span><em>objects</em>, <em>description_attributes</em>, <em>target</em>, <em>depth=2</em>, <em>k=100</em>, <em>minsize=20</em>, <em>beamsize=2000</em><span class="sig-paren">)</span><a class="headerlink" href="#subtil.datamining.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs subgroup discovery.</p>
+<p>Looks for subgroups defined by the attributes in description_attributes with the defined target.</p>
+<p>Uses beam search to look for subgroups.</p>
+<p>The quality measure is picked automatically depending on the type of the target value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>objects: array-like</strong></dt>
+<dd><p class="first last">This array contains objects (Cell, Lineage) to be mined.
+Subgroups will consists of subset of this array.</p>
+</dd>
+<dt><strong>description_attributes: list of string</strong></dt>
+<dd><p class="first last">List containing the attributes to use as description attributes.</p>
+</dd>
+<dt><strong>target: string</strong></dt>
+<dd><p class="first last">The target attribute, possibly preceded by “high” or “low” for numerical attributes</p>
+</dd>
+<dt><strong>depth: int, default: 2</strong></dt>
+<dd><p class="first last">The depth of the beam search.</p>
+</dd>
+<dt><strong>k: int, default: 100</strong></dt>
+<dd><p class="first last">Number of subgroups to return.</p>
+</dd>
+<dt><strong>minsize: int, default:0</strong></dt>
+<dd><p class="first last">Minimum number of instances.
+If set to 0 (default), the minimal size is equal to 1 percent of the total number of objects</p>
+</dd>
+<dt><strong>beamsize: int, default:2000</strong></dt>
+<dd><p class="first last">Size of the beam to use in the beam search.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>subgroups: numpy array</strong></dt>
+<dd><p class="first last">An array of Subgroup objects.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Subtil</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Antoine Adam.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/subtil.datamining.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

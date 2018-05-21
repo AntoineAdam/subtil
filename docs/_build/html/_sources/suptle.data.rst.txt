@@ -1,0 +1,7 @@
+suptle.data module
+=======================
+
+.. automodule:: suptle.data
+    :members:
+    :undoc-members:
+    :show-inheritance:

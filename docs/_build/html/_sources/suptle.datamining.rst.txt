@@ -1,0 +1,7 @@
+suptle.datamining module
+=============================
+
+.. automodule:: suptle.datamining
+    :members:
+    :undoc-members:
+    :show-inheritance:

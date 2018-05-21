@@ -1,0 +1,21 @@
+suptle package
+===================
+
+Submodules
+----------
+
+.. toctree::
+
+   suptle.data
+   suptle.database
+   suptle.datamining
+   suptle.plotting
+   suptle.utils
+
+Module contents
+---------------
+
+.. automodule:: suptle
+    :members:
+    :undoc-members:
+    :show-inheritance:
